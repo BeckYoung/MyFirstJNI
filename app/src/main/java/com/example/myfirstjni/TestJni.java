@@ -38,10 +38,17 @@ public class TestJni {
         System.loadLibrary("myfirstjni");
     }
 
+    /**
+     * 调用C/C++
+     */
     public static native void sayHello();
 
     public static native String getStringForC();
 
+    /**
+     * C/C++代码调用
+     * @param str
+     */
     public static void CCallJava(String str) {
         Log.d(TAG, "C++ str = " +str);
     }
